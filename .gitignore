@@ -1,5 +1,15 @@
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+# === Obsidian: ignorar estado da app (por-máquina) ===
+.obsidian/
+
+# Exceções: versionar só o que faz sentido partilhar
+!.obsidian/community-plugins.json
+
+# === Sensível (token do REST API) ===
+# (já coberto por .obsidian/ acima, mas explícito para segurança)
 .obsidian/plugins/obsidian-local-rest-api/data.json
+
+# === macOS ===
 .DS_Store
+
+# === Obsidian trash ===
 .trash/
