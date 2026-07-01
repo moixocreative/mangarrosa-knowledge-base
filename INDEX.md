@@ -32,6 +32,11 @@ type: index
 - [[50_NOMENCLATURA_COPY/Mapa_Nomenclatura|Mapa completo de nomenclatura]]
 - [[50_NOMENCLATURA_COPY/Copy_Universo_MANGARROSA|Copy do universo + tom de voz (Fase L)]]
 
+### Financeiro
+- [[85_FINANCEIRO/01_Registo_Despesas|Registo de despesas]]
+- [[85_FINANCEIRO/02_Registo_Tempo|Registo de tempo (fases A–M)]]
+- [[85_FINANCEIRO/03_Investimento_Rentabilidade|Investimento & rentabilidade]]
+
 ### Por migrar (próximos lotes)
 - `50_NOMENCLATURA_COPY` — falta: *Rename MATCHA → MANGARROSA* (histórico)
 - `40_INTEGRATIONS` — Stripe, faturação (InvoiceXpress), emails (Resend)
@@ -51,6 +56,7 @@ type: index
 - **Criativos:** PRO + Amadurecer + Polinizar. **Clientes:** só Cesta.
 - **Emails (Fase K):** Opção A (Edge Functions directas) para MVP; Opção B (DB triggers + queue) pós-lançamento.
 - **Botão Stripe test mode:** não ocultar via CSS (quebra o payment form); desaparece em `pk_live_`.
+- **Camada financeira (2026-07):** adicionada `85_FINANCEIRO` (despesas, tempo, investimento) do modelo do vault-template, adaptada a produto próprio — foco em investimento acumulado, não em lucro.
 
 ## Decisões em aberto
 

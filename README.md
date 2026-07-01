@@ -29,6 +29,7 @@ nunca copiar tokens entre máquinas (Mac Studio terá porta e token próprios).
 | `60_BUILD/` | Guia de build Lovable, prompts |
 | `70_PIPELINE/` | Pipeline actual + docs das fases (C, D, F, I, K, L) |
 | `80_PRODUCT/` | Free vs PRO, modelo de pagamento, backlog pós-MVP |
+| `85_FINANCEIRO/` | Despesas, registo de tempo (fases A–M), investimento & rentabilidade |
 | `90_LEGAL/` | Termos, privacidade (RGPD), cookies |
 | `95_BRAND/` | Identidade visual |
 | `99_SESSIONS/` | Resumos de progresso (sessões 6–17) |
