@@ -37,6 +37,9 @@ type: index
 - [[85_FINANCEIRO/02_Registo_Tempo|Registo de tempo (fases A–M)]]
 - [[85_FINANCEIRO/03_Investimento_Rentabilidade|Investimento & rentabilidade]]
 
+### Portefólio
+- [[95_CASE_STUDY|Case Study — MANGARROSA]] — narrativa curada de portefólio (draft; fonte de texto, publicação visual no projecto de portefólio)
+
 ### Por migrar (próximos lotes)
 - `50_NOMENCLATURA_COPY` — falta: *Rename MATCHA → MANGARROSA* (histórico)
 - `40_INTEGRATIONS` — Stripe, faturação (InvoiceXpress), emails (Resend)
@@ -57,8 +60,10 @@ type: index
 - **Emails (Fase K):** Opção A (Edge Functions directas) para MVP; Opção B (DB triggers + queue) pós-lançamento.
 - **Botão Stripe test mode:** não ocultar via CSS (quebra o payment form); desaparece em `pk_live_`.
 - **Camada financeira (2026-07):** adicionada `85_FINANCEIRO` (despesas, tempo, investimento) do modelo do vault-template, adaptada a produto próprio — foco em investimento acumulado, não em lucro.
+- **Camada de portefólio (2026-07):** adicionado [[95_CASE_STUDY]] a partir do `95_CASE_STUDY_TEMPLATE` do vault-template — narrativa curada, fonte de texto; publicação visual vive no projecto de portefólio.
 
 ## Decisões em aberto
 
 - Quais das sessões 6–16 migrar na íntegra vs. arquivar como superadas.
 - Auditoria Fase J: aplicar os termos consolidados em `FloatingNav`, `PostCard`, `OwnProfile`, `FeedAuth`, `Settings`.
+- Case study: preencher timeframe, métricas pós-lançamento e refs visuais quando existirem.
