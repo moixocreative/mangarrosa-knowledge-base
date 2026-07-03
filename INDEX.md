@@ -28,6 +28,11 @@ type: index
 - [[70_PIPELINE/Pipeline_Actual|Pipeline actual (fases A–M)]]
 - [[70_PIPELINE/Fase_K_Emails|Fase K — Emails (activo)]]
 
+### Integrações
+- [[40_INTEGRATIONS/00_Integrations_Overview|Integrações & Serviços (índice)]]
+- [[40_INTEGRATIONS/Stripe_Pagamentos|Stripe — Pagamentos (PRO + Amadurecer)]]
+- [[40_INTEGRATIONS/Faturacao_InvoiceXpress|Faturação — InvoiceXpress + NIF + IVA]]
+
 ### Nomenclatura & Copy
 - [[50_NOMENCLATURA_COPY/Regra_Definitiva_EN_PT|Regra definitiva (código EN / UI PT)]] — canónico
 - [[50_NOMENCLATURA_COPY/Mapa_Nomenclatura|Mapa completo de nomenclatura]]
@@ -42,7 +47,6 @@ type: index
 - [[95_CASE_STUDY|Case Study — MANGARROSA]] — narrativa curada de portefólio (draft; fonte de texto, publicação visual no projecto de portefólio)
 
 ### Por migrar (checklist até apagar o Notion)
-- `40_INTEGRATIONS` — Stripe, faturação (InvoiceXpress), emails (Resend)
 - `30_SYSTEMS` — mensagens, notificações, briefs, stories, explore, favoritos, eliminação de conta
 - `10_ARCHITECTURE` / `20_SETUP` — arquitectura, grid/breakpoints, feed, setup Supabase
 - `80_PRODUCT` — Free vs PRO, modelo de pagamento, backlog
@@ -60,6 +64,7 @@ type: index
 - **Criativos:** PRO + Amadurecer + Polinizar. **Clientes:** só Cesta.
 - **Emails (Fase K):** Opção A (Edge Functions directas) para MVP; Opção B (DB triggers + queue) pós-lançamento.
 - **Botão Stripe test mode:** não ocultar via CSS (quebra o payment form); desaparece em `pk_live_`.
+- **Faturação:** InvoiceXpress (AT-certificado), preços com IVA 23% incluído; Stripe invoicing não é legal em PT.
 - **Camada financeira (2026-07):** adicionada `85_FINANCEIRO` (despesas, tempo, investimento) do modelo do vault-template, adaptada a produto próprio — foco em investimento acumulado, não em lucro.
 - **Camada de portefólio (2026-07):** adicionado [[95_CASE_STUDY]] a partir do `95_CASE_STUDY_TEMPLATE` do vault-template — narrativa curada, fonte de texto; publicação visual vive no projecto de portefólio.
 - **Roadmap de retoma (2026-07):** ordem acordada em [[70_PIPELINE/00_Roadmap_Retoma]] — docs → J → K → B → I → M → **N (design system)**. Sessões 6–16 condensadas numa nota de histórico (não migradas verbatim). Notion só se apaga após export + push + checklist.
@@ -68,3 +73,4 @@ type: index
 
 - Auditoria Fase J: aplicar os termos consolidados em `FloatingNav`, `PostCard`, `OwnProfile`, `FeedAuth`, `Settings`.
 - Case study: preencher timeframe, métricas pós-lançamento e refs visuais quando existirem.
+- Integrações: reconciliar os flows Stripe-directos (PRO/Amadurecer) com o modelo da Cesta.
