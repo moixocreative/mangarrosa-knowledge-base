@@ -21,19 +21,16 @@ Criação do vault e início da migração do Notion → Obsidian.
 **Notas:**
 - Estrutura de pastas estabelecida (`00`–`99`) coerente com `beyond-vision` / `humanmindlab`.
 - Fonte de verdade transferida do Notion para este vault.
-- Migração dos restantes clusters (nomenclatura, integrações, systems, legal, brand, sessões) em curso.
 
 ## v0.2 — 17 Junho 2026
 
 Alinhamento à convenção dos restantes vaults + cluster de nomenclatura.
 
 **Alterado:**
-- Ficheiros `README`, `CLAUDE`, `INDEX`, `CHANGELOG` movidos para a raiz do vault (convenção `beyond-vision`); removido `00_OVERVIEW/00_README.md` e a nota default `Bem-vindo.md`.
+- Ficheiros `README`, `CLAUDE`, `INDEX`, `CHANGELOG` movidos para a raiz do vault; removido `00_OVERVIEW/00_README.md` e a nota default `Bem-vindo.md`.
 
 **Adicionado:**
-- `50_NOMENCLATURA_COPY/Regra_Definitiva_EN_PT.md` — regra canónica (código EN / UI PT; tabelas mantêm-se EN).
-- `50_NOMENCLATURA_COPY/Mapa_Nomenclatura.md` — mapa completo, com divergência de termos assinalada.
-- `50_NOMENCLATURA_COPY/Copy_Universo_MANGARROSA.md` — terminologia consolidada + guia de tom de voz.
+- `50_NOMENCLATURA_COPY/` — regra definitiva (EN/PT), mapa completo, copy do universo + tom de voz.
 
 **Notas:**
 - Resolvida a divergência de nomenclatura: prevalecem Cultivar/Cultivadores/Colher/Polinizar (Fase L, 21 Abr) sobre Fruir/Apanhar/Polinização (Mapa, 13 Abr).
@@ -43,27 +40,36 @@ Alinhamento à convenção dos restantes vaults + cluster de nomenclatura.
 Camadas financeira e de portefólio, roadmap de retoma, e cluster de integrações.
 
 **Adicionado:**
-- `85_FINANCEIRO/` — registo de despesas, tempo (fases A–M) e investimento/rentabilidade (do modelo do vault-template, adaptado a produto próprio).
-- `95_CASE_STUDY.md` — narrativa curada de portefólio (do `95_CASE_STUDY_TEMPLATE`), pré-preenchida em PT-PT.
-- `70_PIPELINE/00_Roadmap_Retoma.md` — sequência acordada: docs → J → K → B → I → M → N (design system).
-- `40_INTEGRATIONS/00_Integrations_Overview.md` — índice do cluster de integrações.
-- `40_INTEGRATIONS/Stripe_Pagamentos.md` — infra Stripe (webhook, edge functions, SQL, price IDs); secret redigido; flow directo assinalado como superado pelo modelo da Cesta.
-- `40_INTEGRATIONS/Faturacao_InvoiceXpress.md` — faturação AT-certificada (NIF, IVA 23%, SAF-T, código do webhook).
+- `85_FINANCEIRO/` — despesas, tempo (fases A–M), investimento/rentabilidade.
+- `95_CASE_STUDY.md` — narrativa curada de portefólio (do `95_CASE_STUDY_TEMPLATE`), PT-PT.
+- `70_PIPELINE/00_Roadmap_Retoma.md` — sequência: docs → J → K → B → I → M → N (design system).
+- `40_INTEGRATIONS/` — índice, Stripe (secret redigido; flow directo assinalado superado), Faturação InvoiceXpress.
 
 **Notas:**
-- Emails (Resend) permanecem documentados em `70_PIPELINE/Fase_K_Emails.md` (não duplicados no cluster de integrações).
-- Segredos de todos os serviços (Stripe, InvoiceXpress, Resend) mantidos fora do vault — só nos secrets do Supabase.
-- Sessões 6–16: decidido condensar numa nota única de histórico (não migrar verbatim).
+- Segredos de todos os serviços mantidos fora do vault (só nos secrets do Supabase).
+- Sessões 6–16: decidido condensar numa nota única de histórico.
 
 ## v0.4 — 3 Julho 2026
 
 Cluster legal.
 
 **Adicionado:**
-- `90_LEGAL/Termos_Condicoes.md` — T&C (rascunho, carece revisão advogado).
-- `90_LEGAL/Politica_Privacidade_RGPD.md` — Política de Privacidade RGPD (rascunho, carece revisão DPO).
-- `90_LEGAL/Politica_Cookies.md` — Política de Cookies (rascunho; chaves `matcha_*` → `mangarrosa_*` actualizadas).
+- `90_LEGAL/` — Termos e Condições, Política de Privacidade (RGPD), Política de Cookies (todos rascunhos, carecem revisão jurídica; chaves `matcha_*` → `mangarrosa_*`).
+
+## v0.5 — 3 Julho 2026
+
+Cluster de sistemas.
+
+**Adicionado:**
+- `30_SYSTEMS/00_Systems_Overview.md` — índice dos sistemas.
+- `30_SYSTEMS/Mensagens.md` — Realtime + guard PRO (por implementar).
+- `30_SYSTEMS/Notificacoes.md` — lista completa in-app (clientes + criativos), ícones, tabela.
+- `30_SYSTEMS/Briefs_Tenho_Interesse.md` — fluxo "Tenho Interesse" + decisões.
+- `30_SYSTEMS/Stories.md` — histórias efémeras 24h (expiração por query, sem cron).
+- `30_SYSTEMS/Explore_Search.md` — pesquisa (AND logic, debounce 400ms).
+- `30_SYSTEMS/Favorites.md` — favoritos privados (Colher).
+- `30_SYSTEMS/Account_Deletion.md` — período de graça 7 dias (RGPD).
 
 **Notas:**
-- Todos os documentos legais migrados com títulos MANGARROSA, mantendo placeholders reais por definir (entidade legal, domínio, sede/foro).
-- Decisões em aberto registadas no INDEX: definir entidade legal, emails legal@/privacy@, foro, e agendar revisão jurídica.
+- Emails de notificação continuam em `Fase_K_Emails` (não duplicados).
+- Checklist "até apagar o Notion": faltam architecture/setup, product, brand, sessões (nota única).
