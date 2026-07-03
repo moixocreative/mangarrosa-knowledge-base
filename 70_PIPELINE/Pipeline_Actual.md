@@ -2,15 +2,26 @@
 projecto: MANGARROSA
 tipo: pipeline
 estado: activo
-data-origem: 2026-04-22
-migrado: 2026-06-17
+actualizado: 2026-07-03
 fonte: Notion — "PIPELINE MANGARROSA — Abril/Maio 2026"
-tags: [pipeline, roadmap]
+tags: [pipeline, roadmap, estado]
 ---
 
 # Pipeline MANGARROSA
 
-> Estado canónico do roadmap. Detalhe da Fase K em [[70_PIPELINE/Fase_K_Emails]].
+> **Fonte única do estado do projecto:** onde estamos, o que se segue, e o estado de todas as fases. Detalhe da fase activa em [[70_PIPELINE/Fase_K_Emails]]. Histórico versionado em [[CHANGELOG]].
+
+## Onde estamos (3 Jul 2026)
+
+- **Migração Notion → vault:** ✅ completa. Falta só rever/descartar extras opcionais antes de apagar o Notion — checklist no [[INDEX]].
+- **Fase J (nomenclatura):** ✅ aplicada no `development` (commit `3b78133`, em push).
+- **Próximo passo:** **Fase K — Emails** (branch `feat/emails-resend`).
+
+## Ordem do roadmap
+
+docs ✅ → **J ✅** → **K (activa)** → B → I → M → N (design system).
+
+Sessões 6–17 condensadas em [[99_SESSIONS/Historico_Sessoes]] (não verbatim). Antes de apagar o Notion: export Markdown + push GitHub + revisão dos extras opcionais.
 
 ## Fases concluídas ✅
 
@@ -26,30 +37,30 @@ tags: [pipeline, roadmap]
 | H | Welcome Modal Fundadores |
 | L | Copy universo MANGARROSA — páginas institucionais, preços, links, badges, nomenclatura visual |
 
-## Fase J — Nomenclatura 🔴 (auditoria restante)
+## Fase J — Nomenclatura ✅ (aplicada 3 Jul 2026)
 
-> Parcialmente implementada: "Amadurecer", "Manga Madura", "Sementes", "Cesta", "Pomar" já no código.
-> Este sprint audita e fecha o que falta.
+> Aplicada no `development` (commit `3b78133`). O verbo de seguir foi consolidado em **Cultivar/Cultivando** em toda a UI.
 
 | Termo actual | MANGARROSA | Estado |
 |---|---|---|
-| Publicação / Post | Manga 🥭 | 🔄 Parcial |
+| Publicação / Post | Manga 🥭 | ✅ |
 | Destacar | Amadurecer | ✅ ModalHighlight |
 | Post em Destaque | Manga Madura | ✅ ModalHighlight |
-| Feed / Descoberta | Pomar 🌿 | 🔄 Parcial |
-| Seguir | Cultivar 🌱 | ⬜ |
-| A seguir | Cultivando | ⬜ |
-| Seguidores | Cultivadores | ⬜ |
-| Guardar / Favoritar | Colher | ⬜ |
-| Analytics | A Colheita | ⬜ |
+| Feed / Descoberta | Pomar 🌿 | ✅ |
+| Seguir | Cultivar 🌱 | ✅ |
+| A seguir | Cultivando | ✅ |
+| Seguidores | Cultivadores | ✅ |
+| Guardar / Favoritar | Colher | ✅ (tab "Colhidas") |
+| Analytics | A Colheita | 🔄 A confirmar nos modais de analytics |
 | Referido / Convite | Semente | ✅ |
 | Wallet de créditos | A Cesta 🧺 | ✅ |
 
-**Ficheiros a auditar:** `FeedAuth.tsx`, `PostCard.tsx`, `OwnProfile.tsx`, `FloatingNav.tsx`,
-`Settings.tsx`, `StoriesBar.tsx`, e todos os empty states / mensagens de erro.
+**Auditados ✅:** `PostCard`, `PostDetail`, `ExploreCreatives`, `Profile`, `OwnProfile`, `FeedAuth` (já estavam ok: `FloatingNav`, `CreativeCard`, `Settings`).
+**Por confirmar:** `StoriesBar.tsx` e headers dos modais de analytics (`ModalPostAnalytics`); **testar** o toggle "Descobrir/Cultivando"; **coordenar** com o branch `fix/conditionally-render-seguir-button`.
+**Fora de âmbito (código, não UI):** variants `"seguir"`/`"a-seguir"`, chave `sessionStorage matcha_scroll_restore`, título "Configurações" vs "Definições".
 
 ## Fase K — Emails 📧
-Em curso. Ver plano detalhado em [[70_PIPELINE/Fase_K_Emails]] (triggers, arquitectura, templates, K1–K8).
+Próxima etapa. Ver plano detalhado em [[70_PIPELINE/Fase_K_Emails]] (triggers, arquitectura, templates, K1–K8). Arranque em `feat/emails-resend`.
 
 ## Fase B — Pendentes de infra ⚙️
 > Não bloqueiam código, mas bloqueiam lançamento. Paralelizáveis com J/K/L.
@@ -77,16 +88,17 @@ Em curso. Ver plano detalhado em [[70_PIPELINE/Fase_K_Emails]] (triggers, arquit
 | I9 | Guard PRO nas mensagens (Free só responde) | ⬜ |
 
 ## Fase M — Limpeza de código 🧹 (pós-lançamento)
-M1 uniformizar padrões · M2 remover código morto (bloco highlight do stripe-webhook,
-ModalPayment dentro do ModalHighlight, `priceId` no array `durations`) ·
-M3 remover rotas `/test*` e console.logs · M4 reduzir `as any` · M5 documentar arquitectura.
+M1 uniformizar padrões · M2 remover código morto (bloco highlight do stripe-webhook, ModalPayment dentro do ModalHighlight, `priceId` no array `durations`) · M3 remover rotas `/test*` e console.logs · M4 reduzir `as any` · M5 documentar arquitectura.
+Candidatos adicionais (Fase J): renomear variants `"seguir"`/`"a-seguir"` e chave `matcha_scroll_restore`.
+
+## Fase N — Design System 🎨 (nova)
+Tokenização W3C DTCG → Figma → Tailwind, com base em [[95_BRAND/Identidade_Visual]].
+
+## Decisões técnicas em vigor
+- **Botão Stripe test mode:** não ocultar via CSS — a tentativa (`iframe[src*="elements-inner-easel"]`) **quebrou o formulário de pagamento**. Desaparece automaticamente ao migrar para `pk_live_` na Fase B. `index.css` sem regras Stripe.
 
 ## Bugs corrigidos (sessão Abril 2026)
-Posts destacados como normais para clientes (`FeedAuth.tsx`) · ReferralBlock ausente para
-criativos (`OwnProfile.tsx`) · Badge PRO duplicado (`BriefDetailClient.tsx`,
-`JobDetailClient.tsx`) · build error JSX (`OwnProfile.tsx`) · saldo wallet não actualizava
-(`CreditsWallet.tsx`, `Settings.tsx`) · stale closure no `balance` ao renovar PRO
-(`Settings.tsx`) · flashes pós-pagamento (`useCredits.ts`) · TS errors (`Settings.tsx`).
+Posts destacados como normais para clientes (`FeedAuth.tsx`) · ReferralBlock ausente para criativos (`OwnProfile.tsx`) · Badge PRO duplicado (`BriefDetailClient.tsx`, `JobDetailClient.tsx`) · build error JSX (`OwnProfile.tsx`) · saldo wallet não actualizava (`CreditsWallet.tsx`, `Settings.tsx`) · stale closure no `balance` ao renovar PRO (`Settings.tsx`) · flashes pós-pagamento (`useCredits.ts`) · TS errors (`Settings.tsx`).
 
 ## Modelo de pagamento — decisões definitivas
 - **Criativos:** PRO (via Cesta) + Destaques (via Cesta) + Referrals (+5 🌱/convite)
@@ -96,3 +108,7 @@ criativos (`OwnProfile.tsx`) · Badge PRO duplicado (`BriefDetailClient.tsx`,
 
 ## Relacionado (por migrar)
 - *BUGS CRÍTICOS PRÉ-LANÇAMENTO — Plano de resolução* (Notion `3404ecfa1326815ab56adc8d1968f11f`)
+
+---
+
+> **Como o estado é mantido:** este ficheiro é o **único** registo do estado das fases e do próximo passo — actualizado ao fecho de cada sessão. Sem tabelas de estado duplicadas noutros ficheiros. Histórico versionado em [[CHANGELOG]].

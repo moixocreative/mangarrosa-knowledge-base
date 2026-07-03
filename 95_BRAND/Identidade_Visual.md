@@ -10,7 +10,7 @@ tags: [brand, identidade, design-system, tokens, cor, tipografia]
 
 # Identidade Visual — MANGARROSA Brand System
 
-> Sistema de identidade: tokens de cor, tipografia, linguagem gráfica e princípios de interação, com mapeamento ficheiro a ficheiro. **Base directa para a Fase N** (tokenização W3C DTCG → Figma → Tailwind) — ver [[70_PIPELINE/00_Roadmap_Retoma]].
+> Sistema de identidade: tokens de cor, tipografia, linguagem gráfica e princípios de interação, com mapeamento ficheiro a ficheiro. **Base directa para a Fase N** (tokenização W3C DTCG → Figma → Tailwind) — ver [[70_PIPELINE/Pipeline_Actual]].
 
 ## 1. Sistema de cor
 

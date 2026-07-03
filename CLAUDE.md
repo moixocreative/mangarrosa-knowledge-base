@@ -26,7 +26,7 @@ Migrado do Notion em Junho 2026.
 - [[00_OVERVIEW/02_Stack_e_Identificadores]] — IDs, Stripe, Supabase
 
 ## Por onde começar
-[[INDEX]] → [[00_OVERVIEW/01_Estado_Actual]] → [[70_PIPELINE/Pipeline_Actual]].
+[[INDEX]] → [[70_PIPELINE/Pipeline_Actual]] (estado + roadmap) → [[70_PIPELINE/Fase_K_Emails]] (activo).
 
 ## Vocabulário do projecto
 Manga (post) · Cultivador (criativo) · Cliente · Semente 🌱 (moeda, 1€) · A Cesta 🧺 (carteira) ·

@@ -20,7 +20,7 @@ nunca copiar tokens entre máquinas (Mac Studio terá porta e token próprios).
 
 | Pasta | Conteúdo |
 |---|---|
-| `00_OVERVIEW/` | Estado actual, stack e identificadores |
+| `00_OVERVIEW/` | Stack e identificadores |
 | `10_ARCHITECTURE/` | Arquitectura, grid/breakpoints, feed, responsivo |
 | `20_SETUP/` | Setup do projecto, guia de integração Supabase |
 | `30_SYSTEMS/` | Mensagens, notificações, briefs, stories, explore, favoritos, eliminação de conta |
@@ -40,8 +40,7 @@ Ficheiros de raiz: `README.md` (este), `CLAUDE.md` (instruções para agentes),
 ## Por onde começar
 
 - [[INDEX]] — índice completo de documentos e decisões
-- [[00_OVERVIEW/01_Estado_Actual|Estado actual]] — onde o projecto está
-- [[70_PIPELINE/Pipeline_Actual|Pipeline]] — roadmap canónico (fases A–M)
+- [[70_PIPELINE/Pipeline_Actual|Pipeline]] — estado, roadmap e fases (fonte única)
 - [[70_PIPELINE/Fase_K_Emails|Fase K — Emails]] — trabalho activo
 
 ## Vocabulário que vais ver em todo o lado

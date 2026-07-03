@@ -84,4 +84,21 @@ Clusters produto, brand e histórico — migração principal do Notion concluí
 - `99_SESSIONS/Historico_Sessoes.md` — histórico condensado das sessões 6–17 (não verbatim).
 
 **Notas:**
-- Todos os clusters principais migrados. Antes de apagar o Notion: export Markdown + push GitHub + revisão página-a-página dos extras opcionais (seed data, i18n, onboarding, performance, etc.).
+- Todos os clusters principais migrados.
+
+## v0.8 — 3 Julho 2026
+
+Consolidação — eliminar duplicação de estado (uma fonte de verdade por assunto).
+
+**Removido:**
+- `00_OVERVIEW/01_Estado_Actual.md` — a tabela de pipeline e o "próximo passo" duplicavam o `Pipeline_Actual`. Conteúdo único absorvido: decisão Stripe test-mode → `Pipeline_Actual`; detalhe da Sessão 17 → `Historico_Sessoes`.
+- `70_PIPELINE/00_Roadmap_Retoma.md` — doc de "como retomar", já cumprido; a ordem do roadmap passou para o topo do `Pipeline_Actual`.
+- `70_PIPELINE/Fase_J_Nomenclatura.md` — fase fechada; o resultado vive no `Pipeline_Actual` (o código está no commit `3b78133`).
+
+**Alterado:**
+- `70_PIPELINE/Pipeline_Actual.md` — **fonte única** do estado das fases, próximo passo, ordem do roadmap e decisões técnicas. Fase J marcada ✅.
+- `INDEX`, `CLAUDE`, `README` — backlinks corrigidos; decisões de pipeline/pagamento deixam de ser duplicadas (apontam para o `Pipeline_Actual`).
+- `20_SETUP/Git_Workflow_Branching.md` — nova convenção de branches + PRs.
+
+**Notas:**
+- Princípio adoptado: **uma fonte de verdade por assunto**. Estado → `Pipeline_Actual`; história → `CHANGELOG`; mapa/decisões de referência → `INDEX`; detalhe → docs de cluster/fase.
