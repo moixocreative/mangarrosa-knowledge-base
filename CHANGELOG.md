@@ -61,14 +61,7 @@ Cluster legal.
 Cluster de sistemas.
 
 **Adicionado:**
-- `30_SYSTEMS/00_Systems_Overview.md` — índice dos sistemas.
-- `30_SYSTEMS/Mensagens.md` — Realtime + guard PRO (por implementar).
-- `30_SYSTEMS/Notificacoes.md` — lista completa in-app (clientes + criativos), ícones, tabela.
-- `30_SYSTEMS/Briefs_Tenho_Interesse.md` — fluxo "Tenho Interesse" + decisões.
-- `30_SYSTEMS/Stories.md` — histórias efémeras 24h (expiração por query, sem cron).
-- `30_SYSTEMS/Explore_Search.md` — pesquisa (AND logic, debounce 400ms).
-- `30_SYSTEMS/Favorites.md` — favoritos privados (Colher).
-- `30_SYSTEMS/Account_Deletion.md` — período de graça 7 dias (RGPD).
+- `30_SYSTEMS/` — índice, Mensagens (Realtime + guard PRO), Notificações (lista completa + ícones + tabela), Briefs/Chamadas ("Tenho Interesse"), Stories (efémeras 24h), Explore/Descobrir, Favoritos/Colher, Eliminação de conta (graça 7 dias RGPD).
 
 **Notas:**
 - Emails de notificação continuam em `Fase_K_Emails` (não duplicados).
@@ -78,8 +71,17 @@ Cluster de sistemas.
 Cluster de arquitectura e setup.
 
 **Adicionado:**
-- `10_ARCHITECTURE/Grid_Breakpoints_Feed.md` — grid/breakpoints, comportamento dos destaques na grid, algoritmo de feed (MVP com boost selectivo + RPC `get_feed_posts`, e scoring editorial pós-MVP), infinite scroll.
-- `20_SETUP/Supabase_Integration_Guide.md` — **esquema completo da BD** (10 tabelas + RLS), trigger de auto-criação de perfil, storage buckets, ligação Lovable, auth no frontend.
+- `10_ARCHITECTURE/Grid_Breakpoints_Feed.md` — grid/breakpoints, destaques na grid, algoritmo de feed (MVP com boost selectivo + RPC `get_feed_posts`, scoring editorial pós-MVP), infinite scroll.
+- `20_SETUP/Supabase_Integration_Guide.md` — esquema completo da BD (10 tabelas + RLS), trigger de perfil, buckets, auth.
+
+## v0.7 — 3 Julho 2026
+
+Clusters produto, brand e histórico — migração principal do Notion concluída.
+
+**Adicionado:**
+- `80_PRODUCT/Free_vs_PRO.md` — matriz Free vs PRO + implementação por ficheiro.
+- `95_BRAND/Identidade_Visual.md` — brand system (cor, tipografia, linguagem gráfica, interação); base para a Fase N.
+- `99_SESSIONS/Historico_Sessoes.md` — histórico condensado das sessões 6–17 (não verbatim).
 
 **Notas:**
-- Faltam à checklist "até apagar o Notion": `80_PRODUCT`, `95_BRAND`, sessões (nota única) — mais extras opcionais (seed data, i18n, onboarding, performance).
+- Todos os clusters principais migrados. Antes de apagar o Notion: export Markdown + push GitHub + revisão página-a-página dos extras opcionais (seed data, i18n, onboarding, performance, etc.).

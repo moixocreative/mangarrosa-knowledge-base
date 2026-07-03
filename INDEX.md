@@ -47,10 +47,16 @@ type: index
 - [[50_NOMENCLATURA_COPY/Mapa_Nomenclatura|Mapa completo de nomenclatura]]
 - [[50_NOMENCLATURA_COPY/Copy_Universo_MANGARROSA|Copy do universo + tom de voz (Fase L)]]
 
+### Produto
+- [[80_PRODUCT/Free_vs_PRO|Free vs PRO — diferenciação de planos]]
+
 ### Legal
 - [[90_LEGAL/Termos_Condicoes|Termos e Condições]] — rascunho, carece revisão advogado
 - [[90_LEGAL/Politica_Privacidade_RGPD|Política de Privacidade (RGPD)]] — rascunho, carece revisão DPO
 - [[90_LEGAL/Politica_Cookies|Política de Cookies]] — rascunho
+
+### Brand
+- [[95_BRAND/Identidade_Visual|Identidade Visual — Brand System]] — base para a Fase N
 
 ### Financeiro
 - [[85_FINANCEIRO/01_Registo_Despesas|Registo de despesas]]
@@ -60,12 +66,17 @@ type: index
 ### Portefólio
 - [[95_CASE_STUDY|Case Study — MANGARROSA]] — narrativa curada de portefólio (draft; fonte de texto, publicação visual no projecto de portefólio)
 
-### Por migrar (checklist até apagar o Notion)
-- `80_PRODUCT` — Free vs PRO, modelo de pagamento, backlog
-- `95_BRAND` — identidade visual
-- `99_SESSIONS` — condensar sessões 6–16 numa nota única de histórico
-- `50_NOMENCLATURA_COPY` — histórico *Rename MATCHA → MANGARROSA*
-- Extras opcionais: seed data plan, i18n, onboarding roles, performance
+### Histórico
+- [[99_SESSIONS/Historico_Sessoes|Histórico de sessões 6–17 (condensado)]]
+
+## Migração do Notion — quase completa
+
+Clusters principais migrados ✅. **Antes de apagar o Notion** (ver [[70_PIPELINE/00_Roadmap_Retoma]]):
+1. Export do Notion em Markdown (rede de segurança).
+2. Push do vault no GitHub.
+3. Revisão página-a-página do que ficou por migrar (abaixo) — migrar ou descartar conscientemente.
+
+**Extras opcionais ainda no Notion** (só migrar se tiverem valor de referência): Seed Data Plan, i18n (PT→BR→EN), Onboarding roles/Role selection, Performance, Admin Dashboard prompt, Lovable Build Guide, Segurança, PostCard v2 design, Payment Element Multibanco/MB Way (detalhe — já resumido em Stripe), Mangas & Fundadores.
 
 ## Decisões chave
 
@@ -74,16 +85,17 @@ type: index
 - **Termos consolidados (Fase J):** Cultivar/Cultivadores (seguir), Colher (favoritar), A Colheita (analytics), Polinizar (referral) — superam Fruir/Apanhar/Polinização.
 - **Modelo de pagamento:** Stripe só carrega A Cesta; PRO e Amadurecer debitam da Cesta. 1 Semente = €1, mínimo 5🌱.
 - **Criativos:** PRO + Amadurecer + Polinizar. **Clientes:** só Cesta.
+- **Amadurecer (destaques):** disponível a Free e PRO (pago via Cesta); a diferenciação PRO está na visibilidade orgânica, não no destaque.
+- **Mensagens:** benefício PRO — Free só responde, não inicia conversas.
 - **Emails (Fase K):** Opção A (Edge Functions directas) para MVP; Opção B (DB triggers + queue) pós-lançamento.
 - **Botão Stripe test mode:** não ocultar via CSS (quebra o payment form); desaparece em `pk_live_`.
 - **Faturação:** InvoiceXpress (AT-certificado), preços com IVA 23% incluído; Stripe invoicing não é legal em PT.
-- **Legal:** T&C, Privacidade (RGPD) e Cookies são rascunhos que carecem de revisão jurídica antes de publicar; entidade legal e domínio por definir.
-- **Mensagens:** benefício PRO — Free só responde, não inicia conversas.
-- **Feed:** cronológico puro no MVP; algoritmo com boost selectivo (destaque +7d, engagement +1h/like máx +24h nas primeiras 48h) via RPC `get_feed_posts`; scoring editorial pós-MVP.
-- **Grid:** destaques ocupam 2×2 na posição cronológica (`grid-flow-dense`), não são movidos para o topo.
-- **Camada financeira (2026-07):** adicionada `85_FINANCEIRO` (despesas, tempo, investimento) do modelo do vault-template, adaptada a produto próprio — foco em investimento acumulado, não em lucro.
-- **Camada de portefólio (2026-07):** adicionado [[95_CASE_STUDY]] a partir do `95_CASE_STUDY_TEMPLATE` do vault-template — narrativa curada, fonte de texto; publicação visual vive no projecto de portefólio.
-- **Roadmap de retoma (2026-07):** ordem acordada em [[70_PIPELINE/00_Roadmap_Retoma]] — docs → J → K → B → I → M → **N (design system)**. Sessões 6–16 condensadas numa nota de histórico (não migradas verbatim). Notion só se apaga após export + push + checklist.
+- **Legal:** T&C, Privacidade (RGPD) e Cookies são rascunhos que carecem de revisão jurídica; entidade legal e domínio por definir.
+- **Feed:** cronológico puro no MVP; boost selectivo (destaque +7d, engagement +1h/like máx +24h nas primeiras 48h) via RPC `get_feed_posts`; scoring editorial pós-MVP.
+- **Cor:** primary passa de verde (#00C896) para mango (#F6B73C); verde fica só para estados de sucesso; destaques em rose→coral; nunca flat fills.
+- **Camada financeira (2026-07):** `85_FINANCEIRO` (despesas, tempo, investimento) — foco em investimento acumulado, não em lucro.
+- **Camada de portefólio (2026-07):** [[95_CASE_STUDY]] a partir do template — fonte de texto; publicação visual no projecto de portefólio.
+- **Roadmap de retoma (2026-07):** docs → J → K → B → I → M → **N (design system)**. Sessões 6–16 condensadas (não migradas verbatim). Notion só se apaga após export + push + checklist.
 
 ## Decisões em aberto
 
@@ -91,3 +103,4 @@ type: index
 - Case study: preencher timeframe, métricas pós-lançamento e refs visuais quando existirem.
 - Integrações: reconciliar os flows Stripe-directos (PRO/Amadurecer) com o modelo da Cesta.
 - Legal: definir entidade legal, domínio de emails (legal@ / privacy@), sede/foro, e agendar revisão jurídica.
+- Notion: rever os extras opcionais e decidir migrar vs. descartar antes de apagar.
