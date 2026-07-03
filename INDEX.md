@@ -24,6 +24,7 @@ type: index
 - [[00_OVERVIEW/02_Stack_e_Identificadores|Stack e identificadores]]
 
 ### Pipeline
+- [[70_PIPELINE/00_Roadmap_Retoma|Roadmap de retoma (Julho 2026)]] — ordem de trabalho acordada
 - [[70_PIPELINE/Pipeline_Actual|Pipeline actual (fases A–M)]]
 - [[70_PIPELINE/Fase_K_Emails|Fase K — Emails (activo)]]
 
@@ -40,15 +41,15 @@ type: index
 ### Portefólio
 - [[95_CASE_STUDY|Case Study — MANGARROSA]] — narrativa curada de portefólio (draft; fonte de texto, publicação visual no projecto de portefólio)
 
-### Por migrar (próximos lotes)
-- `50_NOMENCLATURA_COPY` — falta: *Rename MATCHA → MANGARROSA* (histórico)
+### Por migrar (checklist até apagar o Notion)
 - `40_INTEGRATIONS` — Stripe, faturação (InvoiceXpress), emails (Resend)
 - `30_SYSTEMS` — mensagens, notificações, briefs, stories, explore, favoritos, eliminação de conta
 - `10_ARCHITECTURE` / `20_SETUP` — arquitectura, grid/breakpoints, feed, setup Supabase
 - `80_PRODUCT` — Free vs PRO, modelo de pagamento, backlog
 - `90_LEGAL` — termos, privacidade (RGPD), cookies
 - `95_BRAND` — identidade visual
-- `99_SESSIONS` — sessões 6–16
+- `99_SESSIONS` — condensar sessões 6–16 numa nota única de histórico
+- `50_NOMENCLATURA_COPY` — histórico *Rename MATCHA → MANGARROSA*
 
 ## Decisões chave
 
@@ -61,9 +62,9 @@ type: index
 - **Botão Stripe test mode:** não ocultar via CSS (quebra o payment form); desaparece em `pk_live_`.
 - **Camada financeira (2026-07):** adicionada `85_FINANCEIRO` (despesas, tempo, investimento) do modelo do vault-template, adaptada a produto próprio — foco em investimento acumulado, não em lucro.
 - **Camada de portefólio (2026-07):** adicionado [[95_CASE_STUDY]] a partir do `95_CASE_STUDY_TEMPLATE` do vault-template — narrativa curada, fonte de texto; publicação visual vive no projecto de portefólio.
+- **Roadmap de retoma (2026-07):** ordem acordada em [[70_PIPELINE/00_Roadmap_Retoma]] — docs → J → K → B → I → M → **N (design system)**. Sessões 6–16 condensadas numa nota de histórico (não migradas verbatim). Notion só se apaga após export + push + checklist.
 
 ## Decisões em aberto
 
-- Quais das sessões 6–16 migrar na íntegra vs. arquivar como superadas.
 - Auditoria Fase J: aplicar os termos consolidados em `FloatingNav`, `PostCard`, `OwnProfile`, `FeedAuth`, `Settings`.
 - Case study: preencher timeframe, métricas pós-lançamento e refs visuais quando existirem.
