@@ -72,4 +72,14 @@ Cluster de sistemas.
 
 **Notas:**
 - Emails de notificação continuam em `Fase_K_Emails` (não duplicados).
-- Checklist "até apagar o Notion": faltam architecture/setup, product, brand, sessões (nota única).
+
+## v0.6 — 3 Julho 2026
+
+Cluster de arquitectura e setup.
+
+**Adicionado:**
+- `10_ARCHITECTURE/Grid_Breakpoints_Feed.md` — grid/breakpoints, comportamento dos destaques na grid, algoritmo de feed (MVP com boost selectivo + RPC `get_feed_posts`, e scoring editorial pós-MVP), infinite scroll.
+- `20_SETUP/Supabase_Integration_Guide.md` — **esquema completo da BD** (10 tabelas + RLS), trigger de auto-criação de perfil, storage buckets, ligação Lovable, auth no frontend.
+
+**Notas:**
+- Faltam à checklist "até apagar o Notion": `80_PRODUCT`, `95_BRAND`, sessões (nota única) — mais extras opcionais (seed data, i18n, onboarding, performance).

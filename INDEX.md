@@ -23,6 +23,10 @@ type: index
 - [[00_OVERVIEW/01_Estado_Actual|Estado actual (Sessão 17)]]
 - [[00_OVERVIEW/02_Stack_e_Identificadores|Stack e identificadores]]
 
+### Arquitectura & Setup
+- [[10_ARCHITECTURE/Grid_Breakpoints_Feed|Grid, breakpoints e algoritmo de feed]]
+- [[20_SETUP/Supabase_Integration_Guide|Supabase — guia de integração (schema BD)]]
+
 ### Pipeline
 - [[70_PIPELINE/00_Roadmap_Retoma|Roadmap de retoma (Julho 2026)]] — ordem de trabalho acordada
 - [[70_PIPELINE/Pipeline_Actual|Pipeline actual (fases A–M)]]
@@ -57,11 +61,11 @@ type: index
 - [[95_CASE_STUDY|Case Study — MANGARROSA]] — narrativa curada de portefólio (draft; fonte de texto, publicação visual no projecto de portefólio)
 
 ### Por migrar (checklist até apagar o Notion)
-- `10_ARCHITECTURE` / `20_SETUP` — arquitectura, grid/breakpoints, feed, setup Supabase
 - `80_PRODUCT` — Free vs PRO, modelo de pagamento, backlog
 - `95_BRAND` — identidade visual
 - `99_SESSIONS` — condensar sessões 6–16 numa nota única de histórico
 - `50_NOMENCLATURA_COPY` — histórico *Rename MATCHA → MANGARROSA*
+- Extras opcionais: seed data plan, i18n, onboarding roles, performance
 
 ## Decisões chave
 
@@ -75,6 +79,8 @@ type: index
 - **Faturação:** InvoiceXpress (AT-certificado), preços com IVA 23% incluído; Stripe invoicing não é legal em PT.
 - **Legal:** T&C, Privacidade (RGPD) e Cookies são rascunhos que carecem de revisão jurídica antes de publicar; entidade legal e domínio por definir.
 - **Mensagens:** benefício PRO — Free só responde, não inicia conversas.
+- **Feed:** cronológico puro no MVP; algoritmo com boost selectivo (destaque +7d, engagement +1h/like máx +24h nas primeiras 48h) via RPC `get_feed_posts`; scoring editorial pós-MVP.
+- **Grid:** destaques ocupam 2×2 na posição cronológica (`grid-flow-dense`), não são movidos para o topo.
 - **Camada financeira (2026-07):** adicionada `85_FINANCEIRO` (despesas, tempo, investimento) do modelo do vault-template, adaptada a produto próprio — foco em investimento acumulado, não em lucro.
 - **Camada de portefólio (2026-07):** adicionado [[95_CASE_STUDY]] a partir do `95_CASE_STUDY_TEMPLATE` do vault-template — narrativa curada, fonte de texto; publicação visual vive no projecto de portefólio.
 - **Roadmap de retoma (2026-07):** ordem acordada em [[70_PIPELINE/00_Roadmap_Retoma]] — docs → J → K → B → I → M → **N (design system)**. Sessões 6–16 condensadas numa nota de histórico (não migradas verbatim). Notion só se apaga após export + push + checklist.
