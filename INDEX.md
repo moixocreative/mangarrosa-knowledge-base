@@ -38,6 +38,11 @@ type: index
 - [[50_NOMENCLATURA_COPY/Mapa_Nomenclatura|Mapa completo de nomenclatura]]
 - [[50_NOMENCLATURA_COPY/Copy_Universo_MANGARROSA|Copy do universo + tom de voz (Fase L)]]
 
+### Legal
+- [[90_LEGAL/Termos_Condicoes|Termos e Condições]] — rascunho, carece revisão advogado
+- [[90_LEGAL/Politica_Privacidade_RGPD|Política de Privacidade (RGPD)]] — rascunho, carece revisão DPO
+- [[90_LEGAL/Politica_Cookies|Política de Cookies]] — rascunho
+
 ### Financeiro
 - [[85_FINANCEIRO/01_Registo_Despesas|Registo de despesas]]
 - [[85_FINANCEIRO/02_Registo_Tempo|Registo de tempo (fases A–M)]]
@@ -50,7 +55,6 @@ type: index
 - `30_SYSTEMS` — mensagens, notificações, briefs, stories, explore, favoritos, eliminação de conta
 - `10_ARCHITECTURE` / `20_SETUP` — arquitectura, grid/breakpoints, feed, setup Supabase
 - `80_PRODUCT` — Free vs PRO, modelo de pagamento, backlog
-- `90_LEGAL` — termos, privacidade (RGPD), cookies
 - `95_BRAND` — identidade visual
 - `99_SESSIONS` — condensar sessões 6–16 numa nota única de histórico
 - `50_NOMENCLATURA_COPY` — histórico *Rename MATCHA → MANGARROSA*
@@ -65,6 +69,7 @@ type: index
 - **Emails (Fase K):** Opção A (Edge Functions directas) para MVP; Opção B (DB triggers + queue) pós-lançamento.
 - **Botão Stripe test mode:** não ocultar via CSS (quebra o payment form); desaparece em `pk_live_`.
 - **Faturação:** InvoiceXpress (AT-certificado), preços com IVA 23% incluído; Stripe invoicing não é legal em PT.
+- **Legal:** T&C, Privacidade (RGPD) e Cookies são rascunhos que carecem de revisão jurídica antes de publicar; entidade legal e domínio por definir.
 - **Camada financeira (2026-07):** adicionada `85_FINANCEIRO` (despesas, tempo, investimento) do modelo do vault-template, adaptada a produto próprio — foco em investimento acumulado, não em lucro.
 - **Camada de portefólio (2026-07):** adicionado [[95_CASE_STUDY]] a partir do `95_CASE_STUDY_TEMPLATE` do vault-template — narrativa curada, fonte de texto; publicação visual vive no projecto de portefólio.
 - **Roadmap de retoma (2026-07):** ordem acordada em [[70_PIPELINE/00_Roadmap_Retoma]] — docs → J → K → B → I → M → **N (design system)**. Sessões 6–16 condensadas numa nota de histórico (não migradas verbatim). Notion só se apaga após export + push + checklist.
@@ -74,3 +79,4 @@ type: index
 - Auditoria Fase J: aplicar os termos consolidados em `FloatingNav`, `PostCard`, `OwnProfile`, `FeedAuth`, `Settings`.
 - Case study: preencher timeframe, métricas pós-lançamento e refs visuais quando existirem.
 - Integrações: reconciliar os flows Stripe-directos (PRO/Amadurecer) com o modelo da Cesta.
+- Legal: definir entidade legal, domínio de emails (legal@ / privacy@), sede/foro, e agendar revisão jurídica.

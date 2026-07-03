@@ -54,3 +54,16 @@ Camadas financeira e de portefólio, roadmap de retoma, e cluster de integraçõ
 - Emails (Resend) permanecem documentados em `70_PIPELINE/Fase_K_Emails.md` (não duplicados no cluster de integrações).
 - Segredos de todos os serviços (Stripe, InvoiceXpress, Resend) mantidos fora do vault — só nos secrets do Supabase.
 - Sessões 6–16: decidido condensar numa nota única de histórico (não migrar verbatim).
+
+## v0.4 — 3 Julho 2026
+
+Cluster legal.
+
+**Adicionado:**
+- `90_LEGAL/Termos_Condicoes.md` — T&C (rascunho, carece revisão advogado).
+- `90_LEGAL/Politica_Privacidade_RGPD.md` — Política de Privacidade RGPD (rascunho, carece revisão DPO).
+- `90_LEGAL/Politica_Cookies.md` — Política de Cookies (rascunho; chaves `matcha_*` → `mangarrosa_*` actualizadas).
+
+**Notas:**
+- Todos os documentos legais migrados com títulos MANGARROSA, mantendo placeholders reais por definir (entidade legal, domínio, sede/foro).
+- Decisões em aberto registadas no INDEX: definir entidade legal, emails legal@/privacy@, foro, e agendar revisão jurídica.
